@@ -18,7 +18,7 @@ class QuadrotorState:
     # xyz velocity  [m / s]
     velocity: np.ndarray = field(default_factory=lambda: np.zeros(3))
 
-    # angular velocity (r, p, q)  [rad / s]
+    # angular velocity (r, p, q)  [rad / s]     #NOTE(Elijah) is q yaw?
     angular_velocity: np.ndarray = field(default_factory=lambda: np.zeros(3))
 
     def to_state_vector(self) -> np.ndarray:
